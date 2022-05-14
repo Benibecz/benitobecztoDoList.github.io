@@ -26,6 +26,19 @@ let taskArray = [];
 // function initialised() {
 if (memory === "") {
   taskArray = [];
+} else if (memory !== "") {
+  taskArray = JSON.parse(memory);
+  taskArray.forEach(function (task) {
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    li.className = "task-item";
+    li.textContent = task;
+    // li.appendChild(document.createTextNode(input.value));
+    link.innerHTML = `<i class="fa fa-remove remove-item"></i>`;
+    li.appendChild(link);
+    //   console.log(li);
+    unorderedList.appendChild(li);
+  });
 } else {
   taskArray = JSON.parse(memory);
   taskArray.forEach(function (task) {
