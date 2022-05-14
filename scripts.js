@@ -14,7 +14,7 @@ const clearTaskBtn = document.querySelector(".clearTaskBtn");
 const memory = localStorage.getItem("tasks");
 let taskArray = [];
 // reloadPage();
-initialised();
+// initialised();
 
 /* ***********************RELOAD TASKS LIST */
 // function reloadPage() {
@@ -23,24 +23,24 @@ initialised();
 //   }
 // }
 
-function initialised() {
-  if (memory === "") {
-    taskArray = [];
-  } else {
-    taskArray = JSON.parse(memory);
-    taskArray.forEach(function (task) {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      li.className = "task-item";
-      li.textContent = task;
-      // li.appendChild(document.createTextNode(input.value));
-      link.innerHTML = `<i class="fa fa-remove remove-item"></i>`;
-      li.appendChild(link);
-      //   console.log(li);
-      unorderedList.appendChild(li);
-    });
-  }
+// function initialised() {
+if (memory === "") {
+  taskArray = [];
+} else {
+  taskArray = JSON.parse(memory);
+  taskArray.forEach(function (task) {
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    li.className = "task-item";
+    li.textContent = task;
+    // li.appendChild(document.createTextNode(input.value));
+    link.innerHTML = `<i class="fa fa-remove remove-item"></i>`;
+    li.appendChild(link);
+    //   console.log(li);
+    unorderedList.appendChild(li);
+  });
 }
+// }
 
 /* ***********************TO ADD NEW ITEM BUTTON */
 function addNewTaskUi(e) {
