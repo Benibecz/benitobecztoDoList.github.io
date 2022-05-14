@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Task List</title>
+  </head>
+  <body>
+    <form class="container">
+      <section class="taskList ">
+        <div class="flexColumn marginBottom2">
+          <h1 class="marginBottom">Task List</h1>
+        <input
+          
+          type="text"
+          id="input"
+          value="New Task"
+          
+        />
+        <!-- <label for="#newTask">New Task</label> -->
+        </div>
+        
+        <a href='#' type="submit" class="addTaskBtn">ADD TASK</a>
+      </section>
+      <hr class="topLine">
+      <section class="Task ">
+        <div class="flexColumn marginBottom2">
+          <h2 class="marginBottom">Tasks</h3>
+            <input
+            
+              type="text"
+              id="filter"
+              value="Filter task"
+              
+              
+            />
+            <!-- <label
+              for="filterTask"
+              >Filter Tasks</label
+            > -->
+            <!-- <hr class="bottomLine"> -->
+        </div>
+
+        <ul class="collection"></ul>
+        
+        <a href="#" type="submit" class="clearTaskBtn" >CLEAR TASKS</a>
+      </section>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
