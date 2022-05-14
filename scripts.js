@@ -13,20 +13,21 @@ const clearTaskBtn = document.querySelector(".clearTaskBtn");
 
 const memory = localStorage.getItem("tasks");
 let taskArray = [];
-reloadPage();
+// reloadPage();
 initialised();
 
 /* ***********************RELOAD TASKS LIST */
-function reloadPage() {
-  if (memory !== "") {
-    taskArray = JSON.parse(memory);
-  }
-}
+// function reloadPage() {
+//   if (memory !== "") {
+//     taskArray = JSON.parse(memory);
+//   }
+// }
 
 function initialised() {
   if (memory === "") {
     taskArray = [];
   } else {
+    taskArray = JSON.parse(memory);
     taskArray.forEach(function (task) {
       const li = document.createElement("li");
       const link = document.createElement("a");
