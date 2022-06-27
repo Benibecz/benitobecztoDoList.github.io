@@ -27,7 +27,7 @@ const tasksFromMemory = function () {
 
 
 }
-tasksFromMemory();
+// tasksFromMemory();
 
 // ADDING NEW TASKS FROM TASKS BTN
 
