@@ -48,7 +48,7 @@ const addingMemory = function () {
 
 const addNewTask = function () {
     addingNewTaskUi();
-    addingMemory();
+    // addingMemory();
 
 
 }
