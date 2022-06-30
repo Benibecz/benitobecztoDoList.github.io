@@ -34,21 +34,21 @@ const tasksFromMemory = function () {
 const addingNewTaskUi = function () {
     const newTaskItem = `<li class="task-item">${newTaskInput.value}<i class="fa fa-remove icon"></i></li>`;
     unorderedList.insertAdjacentHTML('afterbegin', newTaskItem)
+    newTaskInput.value = '';
 }
 
-
+const taskArray = []
 const addingMemory = function () {
     const lis = document.querySelectorAll('li');
-    const taskArray = []
     lis.forEach(function (li) {
         taskArray.push(li.textContent);
     })
-    localStorage.setItem('tasks', JSON.stringify(taskArray));
+    // localStorage.setItem('tasks', JSON.stringify(taskArray));
 }
 
 const addNewTask = function () {
     addingNewTaskUi();
-    // addingMemory();
+    addingMemory();
 
 
 }
