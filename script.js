@@ -37,7 +37,7 @@ const addingNewTaskUi = function () {
     newTaskInput.value = '';
 }
 
-const taskArray = []
+let taskArray = []
 const addingMemory = function () {
     const lis = document.querySelectorAll('li');
     lis.forEach(function (li) {
@@ -68,12 +68,17 @@ const removingItems = function (event) {
 
     }
 
-    const memoria = memory.filter(function (mem) {
+
+    taskArray = taskArray.filter(function (mem) {
         console.log(event.target.parentElement.textContent);
         return mem !== event.target.parentElement.textContent;
 
+        // const memoria = memory.filter(function (mem) {
+        //     console.log(event.target.parentElement.textContent);
+        //     return mem !== event.target.parentElement.textContent;
+
     })
-    localStorage.setItem('tasks', JSON.stringify(memoria))
+    // localStorage.setItem('tasks', JSON.stringify(memoria))
 
 
 
