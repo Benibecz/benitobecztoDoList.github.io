@@ -36,17 +36,17 @@ const addingNewTaskUi = function () {
   newTaskInput.value = "";
 };
 
-const addingMemory = function () {
-  const lis = document.querySelectorAll("li");
-  lis.forEach(function (li) {
-    taskList.push(li.textContent);
-  });
-  // localStorage.setItem('tasks', JSON.stringify(taskArray));
-};
+// const addingMemory = function () {
+//   const lis = document.querySelectorAll("li");
+//   lis.forEach(function (li) {
+//     taskList.push(li.textContent);
+//   });
+//   // localStorage.setItem('tasks', JSON.stringify(taskArray));
+// };
 
 const addNewTask = function () {
   addingNewTaskUi();
-  addingMemory();
+  //   addingMemory();
 };
 
 // REMOVING TASKS
